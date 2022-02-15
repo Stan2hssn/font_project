@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 600vh;
+  background-color: #050505;
+  overflow-X: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 132vw;
+  transform: translate(-16vw, -40vh);
+  z-index: 0;
+}
+
+.intro {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  fill: currentColor;
+}
+.intro .logo {
+  position: fixed;
+  align-self: center;
+  overflow: visible;
+  z-index: 1000;
+  width: 80vw;
+  transform-origin: center;
+}
+.intro .L {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, -60, -500) scale(8);
+}
+.intro .U {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, 0, 800) scale(5);
+  transform-origin: 100px 0 !important;
+}
+.intro .O {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, 0, -1100) scale(5);
+  transform-origin: 195px 0px !important;
+}
+.intro .M {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, 0, 800) scale(5);
+  transform-origin: 275px 0 !important;
+}
+.intro .U-2 {
+  position: absolute;
+  transform: matrix(1, 0, 0, 1, 0, -930) scale(5);
+  transform-origin: 300px 0 !important;
+}
+.intro a {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 18px;
+  position: absolute;
+  width: 123px;
+  height: 40px;
+  left: 236px;
+  top: 60px;
+  border-radius: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  font-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */
