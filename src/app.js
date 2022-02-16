@@ -84,7 +84,9 @@ tlFifth.to(".U-2", {
     Power0.linear, duration: 3
 })
 
-let tlheader = gsap.timeline({
+////////////////////////////////// SEPARATOR //////////////////////////////////
+
+let logo = gsap.timeline({
     scrollTrigger: {
         trigger: ".logo",
         start: "650vh center",
@@ -94,7 +96,59 @@ let tlheader = gsap.timeline({
     }
 });
 
-tlheader.to(".logo", {
-    top: "40px", left: "-67px", transform: "scale(0.5)", ease:
+logo.to(".logo", {
+    top: "45px", left: "-67px", transform: "scale(0.5)", ease:
     Circ.easeInOut, duration: 1
 })
+
+////////////////////////////////// SEPARATOR //////////////////////////////////
+
+let preHeader = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".logo",
+        start: "900vh center",
+        end: "900vh center",
+        scrub: true,
+        markers: false
+    }
+});
+
+preHeader.to("a", {
+    display: "flex", duration: 1
+})
+
+////////////////////////////////// SEPARATOR //////////////////////////////////
+
+let header = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".logo",
+        start: "900vh center",
+        end: "901vh center",
+        scrub: true,
+        markers: false
+    }
+});
+
+
+header.to(".intro", {
+    display: "flex",
+    position: "fixed",
+    height: "max-content",
+    flexFlow: "row nowrap",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "92vw",
+    padding: "60px 16px"
+})
+
+header.to(".logo", {
+    transform: "scale(1)", width: `${331.195*0.5}`, display: "flex", position: "relative", top: "0", left: "0"
+})
+
+header.to("a", {
+   opacity: 1, duration: 3
+})
+
+
+
+////////////////////////////////// SEPARATOR //////////////////////////////////
