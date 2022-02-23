@@ -4,10 +4,12 @@ body {
   height: 600vh;
   background-color: #050505;
   overflow-X: hidden;
+  scroll-behavior: smooth;
 }
 
 .background {
-  position: fixed;
+  position: absolute;
+  background-repeat: repeat;
   width: 132vw;
   transform: translate(-16vw, -40vh);
   z-index: 0;
@@ -28,19 +30,21 @@ body {
   z-index: 1000;
   width: 80vw;
   transform-origin: center;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
 }
-.intro .change {
+.intro .header {
   display: flex;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 80vw;
-  z-index: 1000;
-  transform-origin: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 60px 16px 0 16px;
+  height: max-content;
 }
 .intro .L {
   position: absolute;
-  transform: matrix(1, 0, 0, 1, -60, -500) scale(8);
+  transform: matrix(1, 0, 0, 1, -1000, -8200) scale(90);
 }
 .intro .U {
   position: absolute;
@@ -50,7 +54,7 @@ body {
 .intro .O {
   position: absolute;
   transform: matrix(1, 0, 0, 1, 0, -1100) scale(5);
-  transform-origin: 195px 0px !important;
+  transform-origin: 195px 0 !important;
 }
 .intro .M {
   position: absolute;
@@ -61,6 +65,13 @@ body {
   position: absolute;
   transform: matrix(1, 0, 0, 1, 0, -930) scale(5);
   transform-origin: 300px 0 !important;
+}
+.intro .logo_header {
+  display: flex;
+  position: relative;
+  width: 40vw;
+  transition: all 0.5s ease-in;
+  opacity: 0;
 }
 .intro a {
   display: none;

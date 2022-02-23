@@ -11,6 +11,7 @@ let tl = gsap.timeline({
         markers: false
     }
 });
+
 tl.to(".L", {
     transform: "matrix(1, 0, 0, 1, 0, 0)", transform: "scale(1)", ease:
     Power0.linear, duration: 1
@@ -21,7 +22,7 @@ tl.to(".L", {
 let tlSecond = gsap.timeline({
     scrollTrigger: {
         trigger: ".logo",
-        start: "30vh center",
+        start: "70vh center",
         end: "400vh center",
         scrub: true,
         markers: false
@@ -86,28 +87,11 @@ tlFifth.to(".U-2", {
 
 ////////////////////////////////// SEPARATOR //////////////////////////////////
 
-let logo = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".logo",
-        start: "650vh center",
-        end: "900vh center",
-        scrub: true,
-        markers: false
-    }
-});
-
-logo.to(".logo", {
-    top: "45px", left: "-67px", transform: "scale(0.5)", ease:
-    Circ.easeInOut, duration: 1
-})
-
-////////////////////////////////// SEPARATOR //////////////////////////////////
-
 let preHeader = gsap.timeline({
     scrollTrigger: {
         trigger: ".logo",
-        start: "900vh center",
-        end: "900vh center",
+        start: "650vh center",
+        end: "650vh center",
         scrub: true,
         markers: false
     }
@@ -122,33 +106,27 @@ preHeader.to("a", {
 let header = gsap.timeline({
     scrollTrigger: {
         trigger: ".logo",
-        start: "900vh center",
-        end: "901vh center",
+        start: "660vh center",
+        end: "660vh center",
         scrub: true,
-        markers: false
+        markers: false,
+        toggleActions: "play none reverse none",
     }
 });
 
-
-header.to(".intro", {
-    display: "flex",
-    position: "fixed",
-    height: "max-content",
-    flexFlow: "row nowrap",
-    justifyContent: "space-between",
-    alignItems: "center",
-    width: "92vw",
-    padding: "60px 16px"
-})
-
 header.to(".logo", {
-    transform: "scale(1)", width: `${331.195*0.5}`, display: "flex", position: "relative", top: "0", left: "0"
+    visibility: 'hidden',
+    opacity: '0',
 })
 
 header.to("a", {
-   opacity: 1, duration: 3
+   opacity: 1, duration: 1
+})
+
+header.to(".logo_header", {
+    opacity: 1, duration: 1
 })
 
 
-
 ////////////////////////////////// SEPARATOR //////////////////////////////////
+
